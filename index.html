@@ -4,58 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Ghoche Business Card</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #9EAAE5;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .card-container {
-            width: 200px;
-            height: 200px;
-            perspective: 1000px;
-            margin-bottom: 20px;
-        }
-        .card {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.6s;
-        }
-        .card.flipped {
-            transform: rotateY(180deg);
-        }
-        .card-face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-        }
-        .card-back {
-            transform: rotateY(180deg);
-        }
-        #flip-btn {
-            background-color: #2563eb;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="card-container">
-        <div class="card">
+        <div class="card" tabindex="0" aria-label="Business card for Omar Ghoche. Press Enter to flip.">
             <div class="card-face card-front">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-labelledby="frontCardTitle frontCardDesc">
+                    <title id="frontCardTitle">Omar Ghoche Business Card Front</title>
+                    <desc id="frontCardDesc">Business card front with contact information for Omar Ghoche</desc>
                     <rect width="200" height="200" fill="#ffffff" rx="10" ry="10"/>
                     
                     <!-- Logo -->
@@ -64,35 +21,43 @@
                     
                     <!-- Contact Information with Icons -->
                     <!-- Phone Icon -->
-                    <rect x="15" y="100" width="20" height="20" fill="none" stroke="#4b5563" stroke-width="2" rx="2" ry="2"/>
-                    <circle cx="20" cy="105" r="2" fill="#2563eb"/>
-                    <circle cx="25" cy="105" r="2" fill="#2563eb"/>
-                    <circle cx="30" cy="105" r="2" fill="#2563eb"/>
-                    <circle cx="20" cy="110" r="2" fill="#2563eb"/>
-                    <circle cx="25" cy="110" r="2" fill="#2563eb"/>
-                    <circle cx="30" cy="110" r="2" fill="#2563eb"/>
-                    <circle cx="20" cy="115" r="2" fill="#2563eb"/>
-                    <circle cx="25" cy="115" r="2" fill="#2563eb"/>
-                    <circle cx="30" cy="115" r="2" fill="#2563eb"/>
-                    <text x="40" y="115" font-family="'Code Pro', monospace" font-size="10" fill="#4b5563">+55 (45) 9 911-0883</text>
+                    <g aria-label="Phone number">
+                        <rect x="15" y="100" width="20" height="20" fill="none" stroke="#4b5563" stroke-width="2" rx="2" ry="2"/>
+                        <circle cx="20" cy="105" r="2" fill="#2563eb"/>
+                        <circle cx="25" cy="105" r="2" fill="#2563eb"/>
+                        <circle cx="30" cy="105" r="2" fill="#2563eb"/>
+                        <circle cx="20" cy="110" r="2" fill="#2563eb"/>
+                        <circle cx="25" cy="110" r="2" fill="#2563eb"/>
+                        <circle cx="30" cy="110" r="2" fill="#2563eb"/>
+                        <circle cx="20" cy="115" r="2" fill="#2563eb"/>
+                        <circle cx="25" cy="115" r="2" fill="#2563eb"/>
+                        <circle cx="30" cy="115" r="2" fill="#2563eb"/>
+                        <text x="40" y="115" font-family="'Code Pro', monospace" font-size="10" fill="#4b5563">+55 (45) 9 911-0883</text>
+                    </g>
                     
                     <!-- Email Icon -->
-                    <rect x="15" y="130" width="20" height="20" fill="none" stroke="#4b5563" stroke-width="2" rx="2" ry="2"/>
-                    <rect x="15" y="130" width="10" height="10" fill="none" stroke="#4b5563" stroke-width="2" rx="1" ry="1"/>
-                    <rect x="25" y="130" width="10" height="10" fill="none" stroke="#4b5563" stroke-width="2" rx="1" ry="1"/>
-                    <text x="40" y="145" font-family="'Code Pro', monospace" font-size="10" fill="#4b5563">omarghoucher@gmail.com</text>
+                    <g aria-label="Email address">
+                        <rect x="15" y="130" width="20" height="20" fill="none" stroke="#4b5563" stroke-width="2" rx="2" ry="2"/>
+                        <rect x="15" y="130" width="10" height="10" fill="none" stroke="#4b5563" stroke-width="2" rx="1" ry="1"/>
+                        <rect x="25" y="130" width="10" height="10" fill="none" stroke="#4b5563" stroke-width="2" rx="1" ry="1"/>
+                        <text x="40" y="145" font-family="'Code Pro', monospace" font-size="10" fill="#4b5563">omarghoucher@gmail.com</text>
+                    </g>
                     
                     <!-- Website Icon -->
-                    <circle cx="25" cy="170" r="10" fill="#2563eb"/>
-                    <text x="40" y="175" font-family="'Code Pro', monospace" font-size="10" fill="#4b5563">www.devndesigner.com</text>
+                    <g aria-label="Website">
+                        <circle cx="25" cy="170" r="10" fill="#2563eb"/>
+                        <text x="40" y="175" font-family="'Code Pro', monospace" font-size="10" fill="#4b5563">www.devndesigner.com</text>
+                    </g>
                 </svg>
             </div>
             <div class="card-face card-back">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-labelledby="backCardTitle backCardDesc">
+                    <title id="backCardTitle">Omar Ghoche Business Card Back</title>
+                    <desc id="backCardDesc">Business card back with Omar Ghoche's logo</desc>
                     <rect width="200" height="200" fill="#ffffff" rx="10" ry="10"/>
                     
                     <!-- Centered diamond with blue circle inside -->
-                    <g transform="translate(100,100)">
+                    <g transform="translate(100,100)" aria-label="Omar Ghoche logo">
                         <!-- Diamond (tilted square) with rounded corners -->
                         <rect x="-68" y="-68" width="136" height="136" fill="none" stroke="#4b5563" stroke-width="4" rx="8" ry="8" transform="rotate(45)"/>
                         
@@ -105,13 +70,6 @@
     </div>
     <button id="flip-btn">Flip Card</button>
 
-    <script>
-        const card = document.querySelector('.card');
-        const flipBtn = document.getElementById('flip-btn');
-
-        flipBtn.addEventListener('click', () => {
-            card.classList.toggle('flipped');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
